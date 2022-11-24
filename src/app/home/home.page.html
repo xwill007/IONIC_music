@@ -6,20 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-slides pager="true">
+<ion-content padding>
+  <ion-slides pager="true" [options]="slideOps">
+
     <ion-slide>
       <h1>Slide 1</h1>
-      <img src="assets/img/ironman.jpg" alt="IRON MAN">
+      <ion-icon name="close-circle-outline"></ion-icon>
+      <img src="assets/img/ironman.jpg" alt="IRON MAN" >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero voluptatibus magni numquam cum nesciunt obcaecati earum aspernatur cupiditate totam dolores doloribus unde, provident aliquid, rem necessitatibus, at amet voluptate.</p>
+      <ion-icon name="play"></ion-icon>
+      
     </ion-slide>
+
     <ion-slide>
       <h1>Slide 2</h1>
       <img src="assets/img/ironmaninterface.jpg" alt="INTERFACE">
+      <ion-icon name="aperture-outline"></ion-icon>
     </ion-slide>
     <ion-slide>
+
       <h1>Slide 3</h1>
       <img src="assets/img/ironmanvr.jpg" alt="VR">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero voluptatibus magni numquam cum nesciunt obcaecati earum aspernatur cupiditate totam dolores doloribus unde, provident aliquid, rem necessitatibus, at amet voluptate.</p>
     </ion-slide>
+
   </ion-slides>
 
 </ion-content>
