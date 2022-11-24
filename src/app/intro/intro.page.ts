@@ -23,9 +23,9 @@ export class IntroPage implements OnInit {
     imageSrc:"assets/img/ironman.jpg"
   }]
 
-  constructor(private router:Router) { } //, private storage:Storage
+  constructor(private router:Router, private storage:Storage) { } //
   finish(){
-    //this.storage.set("isIntroShowed",true);
+    this.storage.set("isIntroShowed",true);
     this.router.navigateByUrl("/home");
   }
 
