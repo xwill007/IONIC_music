@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-//import {Storage} from "@ionic/storage";
 import {Storage} from "@ionic/storage-angular";
 
 
@@ -25,9 +24,11 @@ export class IntroPage implements OnInit {
     imageSrc:"assets/img/ironman.jpg"
   }]
 
-  constructor(private router:Router) { } //, private storage:Storage
+  constructor(private router:Router, private storage:Storage) { } 
+  
   finish(){
-    //this.storage.set("isIntroShowed",true);
+    this.storage.create();
+    this.storage.set("isIntroShowed",true);
     this.router.navigateByUrl("/home");
   }
 
