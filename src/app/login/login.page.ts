@@ -10,6 +10,17 @@ export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
 
+  validation_messages={
+    email:[
+      {type:"required",message:"El email es requerido "},
+      {type:"pattern",message:",El email no es valido "}
+    ],
+    password:[
+      {type:"required",message:"El password es requerido "},
+      {type:"minlength",message:"El password no es valido " }
+    ]
+  }
+
   constructor(private formBuilder:FormBuilder) {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(
