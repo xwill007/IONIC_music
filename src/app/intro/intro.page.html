@@ -2,9 +2,9 @@
   <h1>INTRO</h1>
   <ion-slides pager="true" [options]="slideOps">
     <ion-slide *ngFor="let slide of slides">
+      <ion-icon name="close" (click)="finish()"></ion-icon>
       <h1>{{slide.title}}</h1>
       <h2>{{slide.subTitle}}</h2>
-      <ion-icon name="close" (click)="finish()"></ion-icon>
       <img src="{{slide.imageSrc}}" alt="IRON MAN" >
       <p>{{slide.description}}</p>
       <ion-icon name="{{slide.icon}}"></ion-icon>
